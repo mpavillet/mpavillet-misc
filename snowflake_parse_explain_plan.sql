@@ -26,4 +26,4 @@ select
 from 
     plan p,
     LATERAL FLATTEN(INPUT => p.src:Operations[0], RECURSIVE => TRUE, mode => 'ARRAY')  as z
-  order by id desc
+  order by id asc
